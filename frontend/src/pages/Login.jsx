@@ -11,12 +11,19 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post('/api/auth/login', formData);
-      login(response.data);
-      navigate('/home');
-    } catch (error) {
-      alert('Login failed. Please try again.');
-    }
+  const response = await axiosInstance.post('/api/auth/login', formData);
+
+  login(response.data);
+
+  if (formData.email.toLowerCase() === 'admin@marketplace.com') {
+    navigate('/admin');
+  } else {
+    navigate('/home');
+  }
+
+} catch (error) {
+  alert('Login failed. Please try again.');
+}
   };
 
   return (
