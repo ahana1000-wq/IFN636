@@ -7,13 +7,13 @@ const Home = () => {
   const products = [
     {
       id: 1,
-      name: 'Handmade Crochet Bag',
+      name: 'Handmade Bee Embroidery',
       price: 29.99,
       image: '/images/product1.jpg'
     },
     {
       id: 2,
-      name: 'Handmade Ceramic Mug',
+      name: 'Handmade Flower Embroidery',
       price: 19.99,
       image: '/images/product2.jpg'
     }
